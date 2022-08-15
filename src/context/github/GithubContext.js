@@ -47,7 +47,7 @@ export const GithubProvider = ({children}) => {
     per_page: 10,
   })
 
-  const response = await  fetch(`${GITHUB_URL}/search/users/${login}/repos?${params}`, {
+  const response = await  fetch(`${GITHUB_URL}/users/${login}/repos?${params}`, {
       headers: {
           Authorization : `${GITHUB_TOKEN}`,
       },
